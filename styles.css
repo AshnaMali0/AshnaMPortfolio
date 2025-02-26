@@ -2,7 +2,7 @@
 
 body {
     margin: 0;
-    /* overflow-x:hidden; */
+    overflow-x:hidden;
     animation: bgmove 4s;
     /* script makes backgroundImage upon animationend */
     /* background-image: linear-gradient(rgb(72, 11, 11), rgb(0, 0, 0)); */
