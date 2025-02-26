@@ -1,0 +1,283 @@
+/* The opening animation css */
+
+body {
+    margin: 0;
+    /* overflow-x:hidden; */
+    animation: bgmove 4s;
+    /* script makes backgroundImage upon animationend */
+    /* background-image: linear-gradient(rgb(72, 11, 11), rgb(0, 0, 0)); */
+    background-repeat:no-repeat;
+}
+
+/* bg animated from transparent to gradient */
+@keyframes bgmove {
+
+    0% {
+    }
+    75% {
+        background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0));
+    }
+
+    100% {
+        background-image: linear-gradient(rgb(72, 11, 11), rgb(0, 0, 0));
+    }
+}
+
+#anim-logo {
+    z-index: 1;
+    position: absolute;
+}
+
+.splash-img {
+    z-index: 0;
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    animation: simplemove 4s;
+    clip-path: inset(15% 5%);
+}
+
+@keyframes simplemove {
+
+    0%,
+    75% {
+        clip-path: inset(0%);
+        opacity: 0%;
+    }
+
+    100% {
+        clip-path: inset(15% 5%);
+        opacity: 100%;
+    }
+}
+
+.border {
+    z-index: -1;
+    animation: bordermove 4s;
+    transform: scale(0.9, 0.7);
+    fill: rgba(255, 255, 255, 0); /* transparent */
+    stroke-width: 5; /* how to align to outisde of rect? Can make it less wide then. */
+    stroke: url(#cl1);
+}
+
+@keyframes bordermove {
+
+    0%,
+    75% {
+        transform: scale(1);
+        opacity: 00%;
+        stroke: url(#cl2);
+    }
+
+    100% {
+        transform: scale(0.9, 0.7);
+        opacity: 100%;
+        stroke: url(#cl1);
+
+    }
+
+}
+
+#window-flex {
+    width: 300vw;
+    display: flex;
+    transition: 1.5s;
+}
+
+.window {
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    transform: translateX(-100vw);
+}
+
+h1 {
+    z-index: 3;
+    color: white;
+}
+
+.nav-flex {
+    position: absolute;
+    width: 70vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-grid {
+    position: absolute;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    text-align: center;
+    transition: 1s;
+}
+
+.nav.grid>* {
+    transition: 1s;
+}
+
+nav {
+    z-index:4;
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+}
+
+.window:hover {
+    right: 200px;
+}
+
+.animate-right {
+    transform: translateX(100vw);
+}
+
+.animate-left {
+    transform: translateX(-100vw);
+}
+
+.grid-move-right {
+    grid-template-columns: 3fr 2fr 1fr;
+}
+
+.grid-move-left {
+    grid-template-columns: 1fr 2fr 3fr;
+}
+
+.rect-component {
+    fill:white;
+    width: 20%; 
+    /* because the rects take up 20% of the "hitbox" width, they don't go as far down with height. Overcompensating with height: 300% works  */
+    height: 300%;
+}
+
+#text-grid>* {
+    color:white;
+    transition: 0.5s;
+    /* position:absolute; z-index:1; text-align:right; color: white;" */
+}
+
+.scroll-grid {
+    border: 3px solid rgb(0, 174, 255);
+    position: fixed;
+    width: 2%; /* "hitbox" for scrolling over */
+    height: 70%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 5%;
+    transition: 1s;
+}
+
+.scroll-grid:hover {
+    width:20%;
+    background-image: linear-gradient(rgba(72, 11, 11, 0.8), rgb(0, 0, 0,0.8));
+    transition: 1s;
+}
+
+.scroll-grid-0 {
+    grid-template-rows: 10fr 3fr 2fr 1fr;
+}
+
+.scroll-grid-1 {
+    grid-template-rows: 2fr 10fr 2fr 1fr;
+}
+
+.scroll-grid-2 {
+    grid-template-rows: 1fr 2fr 10fr 2fr;
+}
+
+.scroll-grid-3 {
+    grid-template-rows: 1fr 2fr 3fr 10fr;
+}
+
+#scroll-window {
+    width:80%;
+    height:70%;
+    z-index:-1;
+    background-color:black;
+    overflow: auto;
+}
+
+#scroll-window > * {
+    border: 1px solid pink;
+    /* z-index:-1;
+    margin-top:auto;
+    margin-bottom: auto;
+    width:80%;
+    height:70%;
+    background:black;
+    overflow: auto; */
+}
+
+.pop-out-text {
+    transform: translateX(-110%);
+}
+
+.thumbnail {
+    aspect-ratio: 16/9;
+    width:100%;
+    transition:0.5s;
+}
+
+.myGrid{
+    position:relative;
+    top:100vh;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3vw;
+    transition: 0.5s;
+}
+
+.myGrid>*:hover .thumbnail{
+    /* transform:scale(1.1); */
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+    opacity: 0.5;
+}
+
+.thumb-text {
+    color:white;
+    position:absolute;
+    opacity: 0;
+    transition: 0.5 ease;
+    text-align: center;
+}
+
+.myGrid>*:hover .thumb-text{
+    opacity: 1.0;
+}
+
+.overlay{
+    position: absolute;
+    /* top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0; */
+    height: 50%; /* changed now that the grid has a margin*/
+    width: 50%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #fff;
+}
+
+.thumb-container:hover .overlay {
+    opacity: 0.6;
+}
+
+.thumb-container {
+   display:flex;
+   align-items: center;
+   justify-content:center;
+}
+
+.work-thumb {
+    width: 20%;
+    /* img background cover */
+}

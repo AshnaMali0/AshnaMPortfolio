@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+initial-scale=1">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie=edge"> -->
+    <title>Ashna Mali's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+    </style>
+</head>
+
+
+
+<body>
+
+
+
+    <nav>
+        <div class="nav-grid">
+            <h1 onclick="aboutClick()">about</h1>
+            <h1 onclick="homeClick()">home</h1>
+            <h1 onclick="workClick()">work</h1>
+        </div>
+    </nav>
+
+    <div id="window-flex">
+
+        <!-- about window div -->
+        <div class="window" style="background:rgb(218, 132, 195);"></div>
+
+        <!-- home window div -->
+        <div class="window" style="display:block;">
+            <!-- animated logo -->
+            <div id="anim-logo">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+                    type="module"></script>
+                <dotlottie-player src="https://lottie.host/bcd84297-f244-443d-ba0c-1da294959d43/1bfTZTOGX0.lottie"
+                    background="transparent" speed="1" style="width: 100vw; height: 100vh" autoplay></dotlottie-player>
+                <!-- <h3 style="position:absolute; z-index:2;">motion graphics + graphic design</h3> -->
+            </div>
+            <!-- splash image -->
+            <img class="splash-img" src="images/Bronze/bronze.gif" alt="bronze gif">
+            <svg style="position:absolute; z-index:-1; width:100%; height:100%;">
+                <rect class="border" width="100%" height="100%" transform-origin="50% 50%" />
+            </svg>
+
+            <!-- Thumbnails -->
+            <div class="myGrid">
+
+                <!-- Motion Graphics, Graphic Design, UX Design, 3D modelling CAD and fabrication -->
+
+                <!-- Origin -->
+                <div class="thumb-container">
+                    <img class="thumbnail" src="images\Thumbnails\Origin phone screen.png" alt="Origin">
+                    <div class="overlay"></div>
+                    <div class="thumb-text">
+                        <h3>Origin</h3>
+                        <h3>See more UX design (button)</h3>
+                    </div>
+                </div>
+
+                <!-- Welcome Week Signage -->
+                <div class="thumb-container">
+                    <img class="thumbnail" src="images\Thumbnails\Welcome Week Signage Thumbnail.png"
+                        alt="Welcome Week Signage">
+                    <div class="overlay"></div>
+                    <div class="thumb-text">
+                        <h3>Welcome Week Signage</h3>
+                        <h3>See more Graphic design (button)</h3>
+                    </div>
+                </div>
+
+                <!-- Rocketship -->
+                <div class="thumb-container">
+                    <video class="thumbnail" autoplay muted loop>
+                        <source src="images\Thumbnails\Rocketship Thumbnail (to loop).mp4" type="video/mp4">
+                        <!-- <source src="movie.ogg" type="video/ogg"> -->
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="overlay"></div>
+                    <h3 class="thumb-text">Rocketship</h3>
+                </div>
+
+                <!-- Are you afraid to think about it? -->
+                <div class="thumb-container">
+                    <img class="thumbnail" src="images\Thumbnails\Rocketship Thumbnail (to loop).gif" alt="Origin">
+                    <div class="overlay"></div>
+                    <h3 class="thumb-text">Are you afraid to think about it?</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- work window -->
+        <div class="window" style="display:flex; align-items:center; justify-content:center;">
+            <!-- visible black window -->
+            <div id="scroll-window">
+                <!-- left-hand scroll components, hoverable. Scroll changes applied here-->
+                <div class="scroll-grid">
+                    <svg width=100%; height=100%>
+                        <rect class="rect-component" />
+                    </svg>
+                    <svg width=100%; height=100%>
+                        <rect class="rect-component" />
+                    </svg>
+                    <svg width=100%; height=100%>
+                        <rect class="rect-component" />
+                    </svg>
+                    <svg width=100%; height=100%>
+                        <rect class="rect-component" />
+                    </svg>
+                </div>
+
+                <!-- underlapping left-hand grid for text to pop out -->
+                <div id="text-grid" class="scroll-grid">
+                    <div id="text1" width="100%" height="100%" style="align-items:center">
+                        <h3>motion graphics</h3>
+                    </div>
+                    <div id="text2" width="100%" height="100%" style=" align-items:center">
+                        <h3>Graphic Design</h3>
+                    </div>
+                    <div id="text3" width="100%" height="100%" style=" align-items:center">
+                        <h3>UX Design</h3>
+                    </div>
+                    <div id="text4" width="100%" height="100%" style=" align-items:center">
+                        <h3>3D modeling and CAD</h3>
+                    </div>
+                </div>
+
+                <!-- text to fill visible black window-->
+                <div class="discipline" data-index="0">
+                    <!-- A Musical Experiment -->
+                    <video class="work-thumb" autoplay muted loop>
+                        <source src="images\Thumbnails\A Musical Experiment Thumbnail (to loop).mp4" type="video/mp4">
+                        <!-- <source src="movie.ogg" type="video/ogg"> -->
+                        Your browser does not support the video tag.
+                    </video>
+
+                    <!-- LightBox -->
+                    <img class="work-thumb" src="images\Thumbnails\LightBox Thumbnail.png" alt="LightBox">
+
+                    <!-- Plush Radio -->
+                    <img class="work-thumb" src="images\Thumbnails\LightBox Thumbnail.png" alt="LightBox">
+
+                    <!-- PeeNYC -->
+
+                    <!-- A Musical Experiment -->
+
+                    <!-- Rocketship -->
+
+                    <!-- Bronze -->
+
+                    <!-- I am... not going down! -->
+
+                </div>
+                <div class="discipline" data-index="1">
+                    <h1>
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsum
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsum
+                    </h1>
+                </div>
+                <div class="discipline" data-index="2">
+                    <h1>
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsum
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsum
+                    </h1>
+                </div>
+                <div class="discipline" data-index="3">
+                    <h1>
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsum
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsumLorem ipsum
+                        Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem
+                        ipsum
+                    </h1>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <svg width="0" height="0">
+        <defs>
+            <linearGradient id="cl1" gradientUnits="objectBoundingBox" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="black" />
+                <stop offset="33%" stop-color="rgba(255,223,154,1)" />
+                <stop offset="50%" stop-color="white" />
+                <stop offset="66%" stop-color="rgba(255,223,154,1)" />
+                <stop offset="100%" stop-color="black" />
+            </linearGradient>
+            <linearGradient id="cl2" gradientUnits="objectBoundingBox" x1="100%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="black" />
+                <stop offset="33%" stop-color="rgba(255,223,154,1)" />
+                <stop offset="50%" stop-color="white" />
+                <stop offset="66%" stop-color="rgba(255,223,154,1)" />
+                <stop offset="100%" stop-color="black" />
+            </linearGradient>
+        </defs>
+    </svg>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="scripts/myscript.js"></script>
+
+</body>

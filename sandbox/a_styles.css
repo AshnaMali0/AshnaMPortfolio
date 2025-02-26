@@ -1,0 +1,91 @@
+body {
+    animation: bgmove 4s;
+    background-image: linear-gradient(rgb(72, 11, 11), rgb(0, 0, 0));
+    }
+
+    /* because overflow is hidden, gradient is only half of what it should be */
+
+@keyframes bgmove {
+    0%, 75% {
+        background-image:linear-gradient(rgba(255, 255, 255, 0),rgba(255, 255, 255, 0));
+    }
+
+    100% {
+        background-image: linear-gradient(rgb(72, 11, 11), rgb(0, 0, 0));
+    }
+}
+
+#anim-logo {
+    z-index:1;
+    position: absolute;
+}
+
+.bronze{
+    z-index:-0;
+    position:relative;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    width:100vw;
+    justify-content: center;
+}
+
+img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    animation: simplemove 4s;
+    margin: 15%;
+    stroke: 5px solid pink;
+  }
+
+@keyframes simplemove {
+    0%, 75% {
+        margin: 0%;
+        opacity: 0%;
+    }
+
+    100%{
+        margin: 15%
+        opacity: 100%;
+    }
+}
+
+.border{
+    animation: bordermove 4s;
+    transform: scale(0.7);
+    fill:rgba(255, 255, 255, 0); /* transparent */
+    stroke-width:7.5; /* how to align to outisde of rect? Can make it less wide then. */
+    stroke: url(#cl1);
+}
+
+@keyframes bordermove {
+    0%, 75% {
+        transform: scale(1);
+        opacity: 0%;
+        stroke: url(#cl2);
+    }
+
+    100%{
+        transform: scale(0.7);
+        opacity: 100%;
+        stroke: url(#cl1);
+
+    }
+
+}
+
+h1 {
+    color:white;
+}
+
+.nav-flex {
+    position: relative;
+    width:70vw;
+    margin-left:auto;
+    margin-right:auto;
+    display:flex;
+    justify-content: space-around;
+}
